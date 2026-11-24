@@ -1,0 +1,15 @@
+# Dependencias principales de SafeVision AI (Python 3.11)
+# Nota: Para soporte CUDA en Windows, instalar torch y torchvision siguiendo
+# las instrucciones del README.md antes de ejecutar pip install -r requirements.txt.
+
+torch>=2.2.0
+torchvision>=0.17.0
+ultralytics>=8.3.0
+opencv-python>=4.9.0
+numpy>=1.26.0,<2.3.0
+PyYAML>=6.0.1
+pandas>=2.2.0
+scikit-learn>=1.4.0
+matplotlib>=3.8.0
+Pillow>=10.2.0
+tqdm>=4.66.0

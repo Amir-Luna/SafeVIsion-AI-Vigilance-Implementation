@@ -1,0 +1,138 @@
+# Configuración centralizada de SafeVision AI
+# Todas las rutas son relativas a la raíz del proyecto para garantizar portabilidad en Windows/Linux.
+
+project:
+  name: "SafeVision AI"
+  version: "1.2.0"
+  seed: 42
+
+paths:
+  data_yaml: "configs/data.yaml"
+  original_images_dir: "datasets/original/images"
+  original_labels_dir: "datasets/original/labels"
+  metadata_csv: "datasets/original/metadata.csv"
+  yolo_dataset_dir: "datasets/yolo"
+  cnn_dataset_dir: "datasets/cnn"
+  cnn_pending_review_dir: "datasets/cnn/revision_pendiente"
+  yolo_best_weights: "models/yolo/best.pt"
+  cnn_best_weights: "models/cnn/best_cnn.pth"
+  evaluation_output_dir: "outputs/evaluation"
+  runs_dir: "outputs/runs"
+
+yolo:
+  # Checkpoint preentrenado oficial de Ultralytics (solo inicialización / transfer learning)
+  pretrained_checkpoint: "yolo11n.pt"
+  imgsz: 640
+  epochs: 100
+  batch: 16
+  patience: 20
+  workers: 4
+  # Umbral normal para el resto de clases (0.30 - 0.35) y umbral diferenciado para MANO (0.20)
+  conf_threshold: 0.35
+  hand_conf_threshold: 0.20
+  iou_threshold: 0.45
+  # NMS agnóstico de clase (evita cajas duplicadas de distintas clases sobre la misma región)
+  agnostic_nms: true
+  # Área mínima relativa al área total del fotograma (0.008 = 0.8%)
+  min_area_ratio: 0.008
+  # Si se detecta PERSONA, descarta detecciones fantasma fuera de su área expandida
+  link_to_person: true
+  person_margin_ratio: 0.15
+  # Máximo de detecciones más confiables retenidas por clase (top-k)
+  top_k_per_class:
+    PERSONA: 1
+    CABEZA: 1
+    MANO: 2
+    GAFAS_SEGURIDAD: 1
+    GUANTES_CORTE: 2
+    MASCARA_SOLDADURA: 1
+    GUANTES_SOLDADURA: 2
+  # Clases oficiales del detector YOLO (deben coincidir con configs/data.yaml)
+  classes:
+    0: "PERSONA"
+    1: "CABEZA"
+    2: "MANO"
+    3: "GAFAS_SEGURIDAD"
+    4: "GUANTES_CORTE"
+    5: "MASCARA_SOLDADURA"
+    6: "GUANTES_SOLDADURA"
+
+fusion:
+  # Fusión de evidencia YOLO + CNN y regla Fail-Safe en DecisionEngine
+  glove_yolo_conf_threshold: 0.35
+  head_epp_yolo_conf_threshold: 0.35
+  head_epp_margin_ratio: 0.25
+  # Confianza mínima estricta de la CNN para aceptar gafas/máscara sin caja YOLO auxiliar
+  cnn_head_strict_conf_threshold: 0.85
+  # Fail-Safe: si hay PERSONA o CABEZA pero ni MANO ni guantes válidos -> NO_CUMPLE
+  fail_safe_missing_hands: true
+
+stabilization:
+  # Estabilización temporal y espacial para inferencia en vivo (webcam / video)
+  enabled: true
+  # Tracker liviano por IoU con suavizado exponencial (EMA) de cajas
+  tracker_iou_threshold: 0.30
+  ema_alpha: 0.35
+  # Histéresis de visibilidad de cajas: elimina destellos de 1-2 frames y tolera oclusiones breves
+  min_hits: 3
+  max_missed: 5
+  # Suavizado de probabilidades softmax de la CNN y confianza en pantalla
+  window_size: 10
+  prob_ema_alpha: 0.25
+  # Histéresis de estado global: frames consecutivos consistentes antes de cambiar alerta
+  min_consistent_frames: 5
+
+cnn:
+  img_size: 224
+  num_classes: 8
+  batch_size: 32
+  epochs: 60
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  dropout: 0.4
+  patience: 12
+  num_workers: 2
+  use_class_weights: true
+  conf_threshold: 0.65
+  # Normalización estándar por canal RGB (consistente entre entrenamiento e inferencia)
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std: [0.229, 0.224, 0.225]
+  classes:
+    0: "GAFAS_COLOCADAS"
+    1: "GAFAS_NO_COLOCADAS"
+    2: "GUANTES_CORTE_COLOCADOS"
+    3: "GUANTES_CORTE_NO_COLOCADOS"
+    4: "MASCARA_COLOCADA"
+    5: "MASCARA_NO_COLOCADA"
+    6: "GUANTES_SOLDADURA_COLOCADOS"
+    7: "GUANTES_SOLDADURA_NO_COLOCADOS"
+
+crops:
+  # Márgenes adicionales relativos al tamaño de la caja original (porcentaje)
+  head_margin_ratio: 0.20
+  hand_margin_ratio: 0.25
+  target_size: 224
+  pad_color: [114, 114, 114]
+  min_crop_width: 32
+  min_crop_height: 32
+
+dataset_split:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  min_samples_warning: 20
+  imbalance_ratio_warning: 3.0
+
+quality:
+  # Umbrales de calidad visual para evitar falsos veredictos
+  min_blur_variance: 35.0
+  min_brightness: 25.0
+  max_brightness: 240.0
+  min_region_width: 32
+  min_region_height: 32
+
+camera:
+  default_width: 1280
+  default_height: 720
+  default_fps: 30
+  window_name: "SafeVision AI - Verificacion de EPP"

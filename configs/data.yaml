@@ -1,0 +1,17 @@
+# Configuración del dataset YOLO para SafeVision AI
+# La ruta 'path' es relativa a la raíz del proyecto SafeVision_AI.
+
+path: ../datasets/yolo
+train: images/train
+val: images/val
+test: images/test
+
+nc: 7
+names: 
+  0: CABEZA
+  1: GAFAS_SEGURIDAD
+  2: GUANTES_CORTE
+  3: GUANTES_SOLDADURA
+  4: MANO
+  5: MASCARA_SOLDADURA
+  6: PERSONA
