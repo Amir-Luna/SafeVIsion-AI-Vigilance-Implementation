@@ -1,0 +1,8 @@
+{
+  "imagenes_evaluadas": 401,
+  "distribucion_estados": {
+    "NO_VERIFICABLE": 333,
+    "NO_CUMPLE": 68
+  },
+  "csv_resultados": "C:\\UCB MECA\\UCB IV 2026\\IA\\SafeVision AI\\SafeVision_AI\\outputs\\evaluation\\joint_test\\resultados_evaluacion_conjunta.csv"
+}

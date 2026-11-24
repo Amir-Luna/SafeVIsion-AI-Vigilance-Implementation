@@ -1,0 +1,14 @@
+                                precision    recall  f1-score   support
+
+               GAFAS_COLOCADAS       0.94      0.97      0.96        35
+            GAFAS_NO_COLOCADAS       0.75      0.68      0.71        60
+       GUANTES_CORTE_COLOCADOS       0.80      0.91      0.85        53
+    GUANTES_CORTE_NO_COLOCADOS       0.61      0.45      0.52        31
+              MASCARA_COLOCADA       1.00      1.00      1.00        35
+           MASCARA_NO_COLOCADA       0.31      0.36      0.33        22
+   GUANTES_SOLDADURA_COLOCADOS       0.86      0.60      0.71        30
+GUANTES_SOLDADURA_NO_COLOCADOS       0.49      0.67      0.56        27
+
+                      accuracy                           0.74       293
+                     macro avg       0.72      0.71      0.71       293
+                  weighted avg       0.75      0.74      0.74       293

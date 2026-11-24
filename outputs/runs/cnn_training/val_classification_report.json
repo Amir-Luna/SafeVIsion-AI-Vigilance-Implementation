@@ -1,0 +1,63 @@
+{
+  "GAFAS_COLOCADAS": {
+    "precision": 0.9444444444444444,
+    "recall": 0.9714285714285714,
+    "f1-score": 0.9577464788732394,
+    "support": 35.0
+  },
+  "GAFAS_NO_COLOCADAS": {
+    "precision": 0.7454545454545455,
+    "recall": 0.6833333333333333,
+    "f1-score": 0.7130434782608696,
+    "support": 60.0
+  },
+  "GUANTES_CORTE_COLOCADOS": {
+    "precision": 0.8,
+    "recall": 0.9056603773584906,
+    "f1-score": 0.8495575221238938,
+    "support": 53.0
+  },
+  "GUANTES_CORTE_NO_COLOCADOS": {
+    "precision": 0.6086956521739131,
+    "recall": 0.45161290322580644,
+    "f1-score": 0.5185185185185185,
+    "support": 31.0
+  },
+  "MASCARA_COLOCADA": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 35.0
+  },
+  "MASCARA_NO_COLOCADA": {
+    "precision": 0.3076923076923077,
+    "recall": 0.36363636363636365,
+    "f1-score": 0.3333333333333333,
+    "support": 22.0
+  },
+  "GUANTES_SOLDADURA_COLOCADOS": {
+    "precision": 0.8571428571428571,
+    "recall": 0.6,
+    "f1-score": 0.7058823529411765,
+    "support": 30.0
+  },
+  "GUANTES_SOLDADURA_NO_COLOCADOS": {
+    "precision": 0.4864864864864865,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.5625,
+    "support": 27.0
+  },
+  "accuracy": 0.7372013651877133,
+  "macro avg": {
+    "precision": 0.7187395366743192,
+    "recall": 0.705292276956154,
+    "f1-score": 0.7050727105063789,
+    "support": 293.0
+  },
+  "weighted avg": {
+    "precision": 0.7497305294159428,
+    "recall": 0.7372013651877133,
+    "f1-score": 0.7375483348956471,
+    "support": 293.0
+  }
+}

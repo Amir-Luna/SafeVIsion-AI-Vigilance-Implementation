@@ -1,0 +1,30 @@
+timestamp,actividad,detalle_infraccion,confianza,archivo_captura
+2026-11-23 16:24:23,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_162423_corte_sin_guantes.jpg
+2026-11-23 16:24:29,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9830,capturas/20261123_162429_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:24:35,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_162435_corte_sin_guantes.jpg
+2026-11-23 16:24:41,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9950,capturas/20261123_162441_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:24:47,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9591,capturas/20261123_162447_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:24:53,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: GUANTES_CORTE_NO_COLOCADOS,0.8381,capturas/20261123_162453_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:24:59,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_162459_corte_sin_guantes.jpg
+2026-11-23 16:25:05,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9314,capturas/20261123_162505_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:25:11,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.7369,capturas/20261123_162511_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:25:17,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.8874,capturas/20261123_162517_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:25:23,corte,CABEZA: GAFAS_NO_COLOCADAS,0.6890,capturas/20261123_162523_corte_sin_gafas.jpg
+2026-11-23 16:25:29,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9759,capturas/20261123_162529_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:25:35,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_162535_corte_sin_guantes.jpg
+2026-11-23 16:25:36,soldadura,CABEZA: MASCARA_NO_COLOCADA; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9958,capturas/20261123_162536_soldadura_sin_mascara_y_guantes.jpg
+2026-11-23 16:25:37,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9808,capturas/20261123_162537_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:29:45,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9636,capturas/20261123_162945_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:30:56,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_163056_corte_sin_guantes.jpg
+2026-11-23 16:31:02,corte,CABEZA: GAFAS_NO_COLOCADAS,0.9294,capturas/20261123_163102_corte_sin_gafas.jpg
+2026-11-23 16:31:38,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.9355,capturas/20261123_163138_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:31:45,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_163145_corte_sin_guantes.jpg
+2026-11-23 16:32:20,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.7774,capturas/20261123_163220_corte_sin_gafas_y_guantes.jpg
+2026-11-23 16:32:26,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.7486,capturas/20261123_163226_corte_sin_gafas_y_guantes.jpg
+2026-11-23 17:17:50,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.6185,capturas/20261123_171750_corte_sin_gafas_y_guantes.jpg
+2026-11-23 17:17:56,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.6525,capturas/20261123_171756_corte_sin_gafas_y_guantes.jpg
+2026-11-23 17:18:02,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_171802_corte_sin_guantes.jpg
+2026-11-23 17:18:08,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.5151,capturas/20261123_171808_corte_sin_gafas_y_guantes.jpg
+2026-11-23 17:18:14,corte,MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,,capturas/20261123_171814_corte_sin_guantes.jpg
+2026-11-23 17:18:20,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.7426,capturas/20261123_171820_corte_sin_gafas_y_guantes.jpg
+2026-11-23 17:18:26,corte,CABEZA: GAFAS_NO_COLOCADAS; MANO_1: Guantes no detectados / verifique manos; MANO_2: Guantes no detectados / verifique manos,0.6395,capturas/20261123_171826_corte_sin_gafas_y_guantes.jpg
